@@ -1,239 +1,121 @@
-Blinkit Grocery Sales Dashboard (Power BI Project)
-📌 Project Title
+# 🛒 Blinkit Sales & Operations Analysis Dashboard  
 
-Blinkit Sales & Outlet Performance Analysis Dashboard
+> A Complete End-to-End Data Analytics Project using **Power BI**  
 
-📊 Project Overview
+---
 
-Developed an interactive Power BI dashboard to analyze Blinkit grocery sales performance across outlet types, sizes, item categories, and customer ratings.
+## 📌 Project Overview  
 
-The dashboard provides insights into:
+This project is a comprehensive **Business Intelligence Dashboard** built using **Power BI** to analyze sales, outlet performance, and product trends for **:contentReference[oaicite:0]{index=0}**.  
 
-Total Sales Performance
+The dashboard provides actionable insights into:
 
-Outlet-wise Contribution
+- 📊 Sales Performance  
+- 🏪 Outlet Analysis  
+- 📦 Product Category Trends  
+- ⭐ Customer Ratings  
+- 💰 Revenue Distribution  
+- 📍 Location-Based Performance  
 
-Item Category Trends
+This project demonstrates strong skills in **Data Cleaning, Data Modeling, DAX, Data Visualization, and Business Insight Generation**.
 
-Fat Content Analysis
+---
 
-Outlet Establishment Trends
+# 🎯 Business Objective  
 
-Rating & Sales Correlation
+The main objective of this project is to:
 
-📁 Dataset Used
+- Analyze overall sales performance.
+- Identify high-performing outlets.
+- Evaluate product category contribution.
+- Understand customer rating patterns.
+- Provide business insights for data-driven decisions.
 
-Blinkit Grocery Data.xlsx
+---
 
-Columns Used:
+# 🗂️ Dataset Description  
 
-Item Identifier
+The dataset includes the following key fields:
 
-Item Type
+- `Item Fat Content`
+- `Item Identifier`
+- `Item Type`
+- `Outlet Establishment Year`
+- `Outlet Identifier`
+- `Outlet Location Type`
+- `Outlet Size`
+- `Outlet Type`
+- `Item Visibility`
+- `Item Weight`
+- `Sales`
+- `Rating`
 
-Item Fat Content
+---
 
-Item Visibility
+# 🛠️ Tools & Technologies Used  
 
-Item Weight
+| Tool | Purpose |
+|------|---------|
+| **Power BI** | Dashboard Creation & Visualization |
+| **Power Query** | Data Cleaning & Transformation |
+| **DAX (Data Analysis Expressions)** | KPI Calculations & Measures |
+| **Excel / CSV Dataset** | Data Source |
 
-Sales
+---
 
-Rating
+# 🧹 Data Cleaning & Preparation  
 
-Outlet Identifier
+✔ Removed missing values  
+✔ Handled null values in Item Weight  
+✔ Standardized categorical columns  
+✔ Corrected inconsistent labels (Low Fat, LF, etc.)  
+✔ Created calculated columns & measures  
+✔ Data type corrections  
 
-Outlet Establishment Year
+---
 
-Outlet Size
+# 📊 Key Performance Indicators (KPIs)  
 
-Outlet Location Type
+- 💰 **Total Sales**
+- 📦 **Total Items Sold**
+- ⭐ **Average Rating**
+- 🏪 **Number of Outlets**
+- 📍 Sales by Location Type
+- 🥫 Sales by Item Type
+- 🏬 Sales by Outlet Size
+- 🕒 Sales by Establishment Year
 
-Outlet Type
+---
 
-📈 KPI Cards Created (Top Section)
-KPI	Value	Formula Used
-💰 Total Sales	$1.20M	SUM(Sales)
-📦 Number of Items	8523	COUNT(Item Identifier)
-⭐ Average Rating	3.92	AVERAGE(Rating)
-📊 Average Sales	$141	AVERAGE(Sales)
-📊 Visualizations Created
-1️⃣ Outlet Establishment Trend (Area Chart)
+# 📈 Dashboard Features  
 
-Purpose:
-Analyze how sales vary based on outlet establishment year.
+## 1️⃣ Overall Sales Analysis
+- Total Revenue Overview
+- Sales by Item Type
+- Fat Content Contribution
+- Year-wise Sales Trend
 
-X-Axis: Outlet Establishment Year
-Y-Axis: Total Sales
+## 2️⃣ Outlet Performance Analysis
+- Outlet Type Comparison
+- Outlet Size Performance
+- Location Tier Analysis
+- Establishment Year Impact
 
-Formula Used:
+## 3️⃣ Product Insights
+- Top Performing Categories
+- Low Performing Categories
+- Visibility Impact on Sales
+- Rating vs Sales Comparison
 
-Total Sales = SUM('BlinkIT Grocery Data'[Sales])
-2️⃣ Total Sales by Item Fat Content (Donut Chart)
+---
 
-Purpose:
-Compare Low Fat vs Regular item contribution to total sales.
+# 🧠 DAX Measures Used  
 
-Fields Used:
+Examples of important measures:
 
-Legend → Item Fat Content
+```DAX
+Total Sales = SUM('Blinkit'[Sales])
 
-Values → Total Sales
+Average Rating = AVERAGE('Blinkit'[Rating])
 
-3️⃣ Total Sales by Item Type (Bar Chart)
-
-Purpose:
-Identify highest performing product categories.
-
-Top Categories Observed:
-
-Fruits
-
-Snacks
-
-Household
-
-Frozen Foods
-
-Dairy
-
-Canned
-
-Baking Goods
-
-Health & Hygiene
-
-Formula Used:
-
-Total Sales = SUM(Sales)
-4️⃣ Outlet Size Contribution (Donut Chart)
-
-Purpose:
-Analyze how outlet size affects sales.
-
-Categories:
-
-Small
-
-Medium
-
-High
-
-5️⃣ Outlet Location Type (Bar Chart)
-
-Purpose:
-Compare sales across:
-
-Tier 1
-
-Tier 2
-
-Tier 3
-
-6️⃣ Outlet Type Performance Table (Matrix Table)
-
-Purpose:
-Compare different outlet types based on:
-
-Total Sales
-
-Number of Items
-
-Average Rating
-
-Average Sales
-
-Outlet Types Analyzed:
-
-Grocery Store
-
-Supermarket Type1
-
-Supermarket Type2
-
-Supermarket Type3
-
-🎛 Filters (Slicers Used)
-
-Left panel contains dynamic filters:
-
-Outlet Location Type
-
-Outlet Size
-
-Outlet Type
-
-These slicers dynamically update all visuals.
-
-🧮 DAX Measures Created
-Total Sales = SUM('BlinkIT Grocery Data'[Sales])
-
-Number of Items = COUNT('BlinkIT Grocery Data'[Item Identifier])
-
-Average Sales = AVERAGE('BlinkIT Grocery Data'[Sales])
-
-Average Rating = AVERAGE('BlinkIT Grocery Data'[Rating])
-🛠 Tools & Features Used
-
-Power BI Desktop
-
-DAX Calculations
-
-Slicers
-
-KPI Cards
-
-Donut Chart
-
-Bar Chart
-
-Area Chart
-
-Matrix Table
-
-Data Modeling
-
-Data Cleaning in Power Query
-
-Conditional Formatting
-
-Custom Color Theme (Yellow/Green – Blinkit Theme)
-
-📊 Insights Derived
-
-✔ Tier 3 outlets contribute highest sales
-✔ Medium sized outlets generate majority revenue
-✔ Fruits & Snacks are top-selling categories
-✔ Low Fat items have slightly higher sales share
-✔ Supermarket Type1 generates highest revenue
-✔ Average rating across outlets is ~3.9
-
-🚀 Skills Demonstrated
-
-Data Cleaning & Transformation
-
-DAX Measure Creation
-
-Business KPI Development
-
-Dashboard Designing
-
-Data Visualization
-
-Sales Performance Analysis
-
-Retail Data Analytics
-
-🎯 Business Impact
-
-This dashboard helps:
-
-Identify top-performing outlet types
-
-Understand customer buying patterns
-
-Optimize product category strategy
-
-Improve outlet expansion planning
-
-Increase revenue through data-driven decisions
+Total Items = COUNT('Blinkit'[Item Identifier])
